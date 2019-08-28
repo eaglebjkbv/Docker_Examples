@@ -1,0 +1,15 @@
+# Docker File Build işlemi :
+
+docker build -t merhaba-dunya .
+# Açıklama: imajın ismi merhaba-dunya bu klasörde çalıştırlacak:
+
+
+# Dockerfile ile tanımlanan imajı çalıştırmak için :
+
+docker run -p 80:80 merhaba-dunya
+
+# Açıklama : merhab-dunya imajını çalıştır lokalde 80 containerde 80
+
+# lokal makinedeki src klasörünü docker containerdeki html klasörüne mount ettik
+# Geliştirme sırasında bu şekilde yapılabilir.
+docker run -p 80:80 -v /Users/bulent/docker/src:/var/www/html/  merhaba-dunya
